@@ -16,5 +16,8 @@
     "url": "https://github.com/Ykwim-77/clima-time/issues"
   },
   "homepage": "https://github.com/Ykwim-77/clima-time#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "angular": "^1.8.3"
+  }
 }

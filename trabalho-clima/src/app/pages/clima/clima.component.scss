@@ -99,3 +99,14 @@ p{
   gap: 8px;
 }
 
+.minmax{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+  .min, .max{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+

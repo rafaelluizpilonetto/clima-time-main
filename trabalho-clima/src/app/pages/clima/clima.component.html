@@ -11,6 +11,10 @@
     <h3 class="temp">
       {{ dadosClima()?.main?.temp | number: '1.0-0' }}°C
     </h3>
+    <div class="minmax">
+      <p class="min">Min: {{ dadosClima()?.main?.temp_min | number: '1.0-0' }}°C</p>
+      <p class="max">Max: {{ dadosClima()?.main?.temp_max | number: '1.0-0' }}°C</p>
+    </div>
     <div class="imgTitle">
       @if (dadosClima()) {
         <p class="desc">{{ clima?.description | titlecase }}</p>

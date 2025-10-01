@@ -1,8 +1,24 @@
 <div class="clima-container">
   <div class="card">
-    <h1 class="nuvem">☁️</h1>
-    <h1 class="city">{{ dadosClima()?.name}}</h1>
-    <h2 class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0'}}°C</h2>
-    <button (click)="navegarParaTelaTelaPesquisa()">Pesquisar</button>
+    <div class="imgTitle">
+      @let clima = (dadosClima()!.weather[0]);
+      <img class="nuvem"
+          [src]="'https://openweathermap.org/img/wn/' + clima?.icon + '@2x.png'"
+          alt="Ícone do clima" />
+    </div>
+    <h1 class="city">{{ dadosClima()?.name }}</h1>
+
+    <h3 class="temp">
+      {{ dadosClima()?.main?.temp | number: '1.0-0' }}°C
+    </h3>
+    <div class="imgTitle">
+      @if (dadosClima()) {
+        <p class="desc">{{ clima?.description | titlecase }}</p>
+      }
+    </div>
+
+    <button (click)="navegarParaTelaTelaPesquisa()">
+      Pesquisar
+    </button>
   </div>
 </div>
